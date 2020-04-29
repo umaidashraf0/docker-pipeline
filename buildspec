@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       java: openjdk8
       docker: 18
+	  maven: 3.6.3
   pre_build:
     commands:
 	  - mvn install
