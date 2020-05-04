@@ -5,10 +5,10 @@ phases:
     runtime-versions:
       java: openjdk8
       docker: 18
-	  maven: 3.6.3
+	    maven: 3.6.3
   pre_build:
     commands:
-	  - mvn install
+	    - mvn install
       - $(aws ecr get-login --no-include-email --region us-east-1)
   build:
     commands:
@@ -20,4 +20,4 @@ phases:
 
   artifacts:
     files:
-	  - target/java-0.0.1-SNAPSHOT.jar
+	    - target/java-0.0.1-SNAPSHOT.jar
