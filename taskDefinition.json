@@ -17,5 +17,6 @@
     ],
     "networkMode": "awsvpc",
     "cpu": "256",
-    "memory": "512"
+    "memory": "512",
+    "family": "docker-pipeline-ECS-task-definition"
 }
