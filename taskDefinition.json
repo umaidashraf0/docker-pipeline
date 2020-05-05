@@ -1,5 +1,5 @@
 {
-    "executionRoleArn": "arn:aws:iam::359761372359:role/ecs_task_def_iam_role"
+    "executionRoleArn": "arn:aws:iam::359761372359:role/ecs_task_def_iam_role",
     "containerDefinitions": [
         {
             "name": "javaImageContainer",
