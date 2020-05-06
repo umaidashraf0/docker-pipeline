@@ -5,18 +5,10 @@
             "name": "javaImageContainer",
             "image": "<image>",
             "essential": true,
-            "logConfiguration": { 
-                "logDriver": "awslogs",
-                "options": { 
-                    "awslogs-group" : "/ecs/fargate-task-definition",
-                    "awslogs-region": "us-east-1",
-                    "awslogs-stream-prefix": "ecs"
-                }
-            },
             "portMappings": [
                 {
-                    "hostPort": 8080,
-                    "containerPort": 8080
+                    "hostPort": 80,
+                    "containerPort": 80
                 }
             ]
         }
@@ -25,7 +17,7 @@
         "FARGATE"
     ],
     "networkMode": "awsvpc",
-    "cpu": "512",
-    "memory": "1024",
+    "cpu": "256",
+    "memory": "512",
     "family": "docker-pipeline-ECS-task-definition"
 }
