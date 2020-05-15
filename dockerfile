@@ -1,11 +1,7 @@
-
-FROM ubuntu:16.04
-
-RUN apt-get update && \
-apt-get install -y default-jre awscli
+FROM openjdk:8-jdk-alpine
 
 COPY target/java-0.0.1-SNAPSHOT.jar /springBootApplication.jar
 
 EXPOSE 8080
 
-CMD [java -jar /springBootApplication.jar"]
+ENTRYPOINT ["java", "-jar", "/springBootApplication.jar"]
